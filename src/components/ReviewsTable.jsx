@@ -1,5 +1,6 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import '../styles/ReviewsTable.css';
 
 const ReviewsTable = () => {
   const { reviews, filters } = useSelector((state) => state.reviews);
@@ -19,7 +20,7 @@ const ReviewsTable = () => {
   const paginatedReviews = filteredReviews.slice(startIndex, startIndex + filters.pageSize);
 
   return (
-    <table>
+    <table className="reviews-table">
       <thead>
         <tr>
           <th>Платформа</th>

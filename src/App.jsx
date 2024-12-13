@@ -2,6 +2,9 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchReviews } from './reducers/reviewsReducer';
 import ReviewsTable from './components/ReviewsTable.jsx';
+import SearchBar from './components/SearchBar.jsx';
+import Pagination from './components/Pagination.jsx';
+import './styles/index.css';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -11,9 +14,11 @@ const App = () => {
   }, [dispatch]);
 
   return (
-    <div>
-      <h1>Отзывы</h1>
+    <div className="app">
+      <h1 className="app-title">Отзывы</h1>
+      <SearchBar />
       <ReviewsTable />
+      <Pagination />
     </div>
   );
 };

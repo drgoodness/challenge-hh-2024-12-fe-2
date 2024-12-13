@@ -9,7 +9,7 @@ const initialState = {
     sortBy: 'date',
     search: '',
     page: 1,
-    pageSize: 5,
+    pageSize: 2,
   },
   loading: false,
 };
