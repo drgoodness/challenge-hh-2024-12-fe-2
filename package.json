@@ -28,7 +28,8 @@
     "redux-saga": "^1.2.3"
   },
   "devDependencies": {
-    "eslint-config-airbnb-base": "^15.0.0"
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-react": "^7.37.2"
   },
   "browserslist": {
     "production": [

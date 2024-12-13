@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { fetchReviews } from './reducers/reviewsReducer';
-import ReviewsTable from './components/ReviewsTable';
+import ReviewsTable from './components/ReviewsTable.jsx';
 
 const App = () => {
   const dispatch = useDispatch();

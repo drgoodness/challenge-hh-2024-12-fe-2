@@ -5,12 +5,10 @@ const ReviewsTable = () => {
   const { reviews, filters } = useSelector((state) => state.reviews);
 
   const filteredReviews = reviews
-    .filter((review) =>
-      (!filters.platform || review.platform === filters.platform) &&
-      review.rating >= filters.ratingRange[0] &&
-      review.rating <= filters.ratingRange[1] &&
-      review.text.toLowerCase().includes(filters.search.toLowerCase())
-    )
+    .filter((review) => (!filters.platform || review.platform === filters.platform)
+      && review.rating >= filters.ratingRange[0]
+      && review.rating <= filters.ratingRange[1]
+      && review.text.toLowerCase().includes(filters.search.toLowerCase()))
     .sort((a, b) => {
       if (filters.sortBy === 'date') return new Date(b.date) - new Date(a.date);
       if (filters.sortBy === 'rating') return b.rating - a.rating;
